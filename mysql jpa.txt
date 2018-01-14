@@ -1,0 +1,29 @@
+
+
+
+jpa & hibernate and mysql:
+
+
+public void select()
+{
+
+EntityManager em=new CreateEntityManager();
+em.getTransaction().begin();
+query q=em.createQuery("select a.id,a.firstname,a.lastname from Author A");
+List<Author> authors=q.getResultList();
+for(Author a:authors)
+{
+log.info("Author"+a.getFirstname()+""+a.getLastname());
+}
+em.getTransaction.commit();
+em.close();
+}
+}
+
+
+
+
+stored procedure :
+
+->jooq or querydsl
+
